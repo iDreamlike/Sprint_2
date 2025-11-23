@@ -17,6 +17,6 @@ public class Main {
 
         System.out.println("Сумма всех товаров в корзине без учета скидок: " + shoppingCart.getSumWithoutDiscount());
         System.out.println("Сумма всех товаров в корзине с учетом скидок: " + shoppingCart.getSumWithDiscount());
-        System.out.println("Сумма только вегетарианских продуктов в корзине с учетом скидок: " + shoppingCart.getSumWithoutDiscountVegetarian());
+        System.out.println("Сумма только вегетарианских продуктов в корзине без учета скидок: " + shoppingCart.getSumWithoutDiscountVegetarian());
     }
 }
