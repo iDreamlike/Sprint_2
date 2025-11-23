@@ -1,5 +1,7 @@
 package model;
 
+import model.constants.Discount;
+
 public class Apple extends Food {
     String colour;
 
@@ -9,7 +11,7 @@ public class Apple extends Food {
         this.colour = colour;
         this.isVegetarian = true;
         if (colour.equals("red")) {
-            this.discount = 60;
+            this.discount = Discount.DISCOUNT;
         }
     }
 
