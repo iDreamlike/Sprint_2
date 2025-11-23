@@ -21,12 +21,8 @@ public class ShoppingCart {
     public double getSumWithDiscount() {
         double sum = 0;
         for (Food food : foodArray) {
-            if (food.getDiscount() == 0) {
-                sum += food.getAmount() * food.getPrice();
-            } else {
-                double foodSum = food.getAmount() * food.getPrice();
-                sum += foodSum - foodSum * food.getDiscount() / 100;
-            }
+            double foodSum = food.getAmount() * food.getPrice();
+            sum += foodSum - foodSum * food.getDiscount() / 100;
         }
         return sum;
     }
