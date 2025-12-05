@@ -10,30 +10,30 @@ public class ShoppingCart {
         this.foodArray = foodArray;
     }
 
-    public double getSumWithoutDiscount() {
-        double sum = 0;
+    public double getFullSum() {
+        double fulSum = 0;
         for (Food food : foodArray) {
-            sum += food.getAmount() * food.getPrice();
+            fulSum += food.getAmount() * food.getPrice();
         }
-        return sum;
+        return fulSum;
     }
 
     public double getSumWithDiscount() {
-        double sum = 0;
+        double sumWithDiscount = 0;
         for (Food food : foodArray) {
             double foodSum = food.getAmount() * food.getPrice();
-            sum += foodSum - foodSum * food.getDiscount() / 100;
+            sumWithDiscount += foodSum - foodSum * food.getDiscount() / 100;
         }
-        return sum;
+        return sumWithDiscount;
     }
 
-    public double getSumWithoutDiscountVegetarian() {
-        double sum = 0;
+    public double getFullSumVegetarian() {
+        double fullSumVegetarian = 0;
         for (Food food : foodArray) {
             if (food.isVegetarian()) {
-                sum += food.getAmount() * food.getPrice();
+                fullSumVegetarian += food.getAmount() * food.getPrice();
             }
         }
-        return sum;
+        return fullSumVegetarian;
     }
 }

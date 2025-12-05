@@ -3,7 +3,7 @@ package model;
 import model.constants.Discount;
 
 public class Apple extends Food {
-    String colour;
+    private String colour;
 
     public Apple(int amount, double price, String colour) {
         this.amount = amount;
@@ -14,5 +14,4 @@ public class Apple extends Food {
             this.discount = Discount.DISCOUNT;
         }
     }
-
 }
